@@ -18,7 +18,7 @@ export default function Home() {
     setLoading(true);
 
     try {
-      // 1️⃣ Fetch Movie
+      
       if (!movieId.startsWith("tt")) {
         setError("IMDb ID must start with 'tt'");
         setLoading(false);
@@ -35,7 +35,7 @@ export default function Home() {
 
       setMovie(data);
 
-      // 2️⃣ Fetch AI Insight
+
       const aiRes = await fetch("/api/ai", {
         method: "POST",
         headers: {
